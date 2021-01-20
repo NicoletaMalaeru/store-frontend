@@ -42,6 +42,4 @@ export const services = [
   },
 ]
 
-export const products_url = 'http://127.0.0.1:8000/products_list'
-
-export const single_product_url = `https://course-api.com/react-store-single-product?id=`
+export const products_url = 'https://kini-backend.herokuapp.com/products_list'
