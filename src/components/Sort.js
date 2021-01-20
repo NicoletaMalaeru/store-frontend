@@ -13,15 +13,15 @@ const Sort = () => {
         <BsList />
       </button>
     </div>
-    <p>{products.length} produse gasite</p>
+    <p>{products.length} Products found</p>
     <hr />
     <form>
-      <label htmlFor='sort'>Sorteaza dupa:</label>
+      <label htmlFor='sort'>Sort by:</label>
       <select name = 'sort' id = 'sort' className='sort-input' value = {sort} onChange={updateSort}>
-        <option value='price-lowest'>pret (cel mai mic)</option>
-        <option value='price-highest'>pret (cel mai mare)</option>
-        <option value='name-a'>nume (a-z)</option>
-        <option value='name-z'>nume (z-a)</option>
+        <option value='price-lowest'>Price (Lowest)</option>
+        <option value='price-highest'>Price (Highest)</option>
+        <option value='name-a'>Name (a-z)</option>
+        <option value='name-z'>Name (z-a)</option>
       </select>
     </form>
   </Wrapper>

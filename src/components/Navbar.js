@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo from '../assets/logo.svg'
+import logo from '../assets/kini.jpeg'
 import { FaBars } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { links } from '../utils/constants'
 import CartButtons from './CartButtons'
 import { useProductsContext } from '../context/products_context'
-import { useUserContext } from '../context/user_context'
+
 
 const Nav = () => {
   const {openSidebar} = useProductsContext()
@@ -14,8 +14,8 @@ const Nav = () => {
     <NavContainer>
       <div className='nav-center'>
         <div className = 'nav-header'>
-          <Link to = '/'>
-            <img src = {logo} alt = '' />
+          <Link to = '#'>
+                      <img src={logo} alt='' style={{ width:'110px',height:'85px',}}/>
           </Link>
           <button type = "button" onClick={openSidebar} className='nav-toggle'>
             <FaBars />

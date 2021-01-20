@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useFilterContext } from '../context/filter_context'
-import { getUniqueValues, formatPrice } from '../utils/helpers'
-import { FaCheck } from 'react-icons/fa'
+import { getUniqueValues } from '../utils/helpers'
+
 
 const Filters = () => {
     const{
@@ -25,12 +25,12 @@ const Filters = () => {
       <form onSubmit={(e)=>e.preventDefault()}>
         {/* search input */}
           <div className='form-control'>
-            <input type='text' name = 'text' placeholder='cauta' className='search-input' value={text} onChange={updateFilters}/>
+            <input type='text' name = 'text' placeholder='search' className='search-input' value={text} onChange={updateFilters}/>
           </div>
         {/* end search input */}
         {/* categories */}
         <div className='form-control'>
-          <h5>Categorie</h5>
+          <h5>Category</h5>
           <div>
             {
               categories.map((c,index)=>{
@@ -42,13 +42,13 @@ const Filters = () => {
         {/* end categories */}
         {/* prices */}
         <div className='form-control'>
-          <h5>Pret</h5>
-          <p className='price'>{price}</p>
+          <h5>Price</h5>
+          <p className='price'>{price} RON</p>
           <input type='range' name = 'price' onChange={updateFilters} min ={min_price} max={max_price} value = {price}/>
         </div>
         {/* end prices */}
       </form>
-      <button type='button' className='clear-btn' onClick={clearFilters}>Sterge Filtrele</button>
+      <button type='button' className='clear-btn' onClick={clearFilters}>Clear Filters</button>
     </div>
   </Wrapper>
 }
