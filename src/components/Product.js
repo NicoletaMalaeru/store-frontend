@@ -9,7 +9,7 @@ const Product = ({ image, name, price, id }) => {
   return <Wrapper>
     <div className="container">
       
-      <img src={`http://127.0.0.1:8000${image}`} alt={name}/>
+      <img src={`https://kini-backend.herokuapp.com${image}`} alt={name}/>
       <Link to={`/products/${id}`} className="link">
         <FaSearch />
       </Link>
